@@ -1,0 +1,5 @@
+<div class="container d-flex flex-row align-items-start justify-content-between">
+  <ng-container *ngFor="let st of status">
+    <app-kanban-column [status]="st" [tasks]="getTasksByStatus(st)"></app-kanban-column>
+  </ng-container>
+</div>

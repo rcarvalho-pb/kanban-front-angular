@@ -1,0 +1,7 @@
+<div class="container d-flex flex-column align-items-center" (dragover)="onDragOver($event)">
+  <h2>{{ status }}</h2>
+  <ng-container *ngFor="let task of tasks">
+    <app-kanban-task [task]="task" class="task w-100" [draggable]="true" (dragstart)="onDragStart($event)"
+      (dragend)="onDragEnd($event)"></app-kanban-task>
+  </ng-container>
+</div>
